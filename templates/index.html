@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Soldier Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="game-container">
+        <div class="hud">
+            <div class="health">Health: <span id="health">100</span></div>
+            <div class="hud-item">
+                <span>Score:</span>
+                <span id="score">0</span>
+            </div>
+            <div class="hud-item">
+                <span>Money:</span>
+                <span id="money">$0</span>
+            </div>
+            <div class="hud-item">
+                <span>Current Weapon:</span>
+                <span id="current-weapon">pistol</span>
+            </div>
+            <div class="hud-item">
+                <span>Ammo:</span>
+                <span id="ammo">∞</span>
+            </div>
+            <div class="powerups">
+                <div id="speed-boost" class="powerup-status">Speed Boost: <span>Inactive</span></div>
+                <div id="invincibility" class="powerup-status">Invincibility: <span>Inactive</span></div>
+                <div id="infinite-ammo" class="powerup-status">Infinite Ammo: <span>Inactive</span></div>
+            </div>
+        </div>
+        <canvas id="gameCanvas"></canvas>
+        <div class="instructions">
+            <div class="instruction-item">
+                <span class="key">W</span>
+                <span class="key">A</span>
+                <span class="key">S</span>
+                <span class="key">D</span>
+                <span class="text">Move</span>
+            </div>
+            <div class="instruction-item">
+                <span class="key">Mouse</span>
+                <span class="text">Aim</span>
+            </div>
+            <div class="instruction-item">
+                <span class="key">Click</span>
+                <span class="text">Shoot</span>
+            </div>
+            <div class="instruction-item">
+                <span class="key">1</span>
+                <span class="key">2</span>
+                <span class="key">3</span>
+                <span class="text">Switch Weapons</span>
+            </div>
+            <div class="instruction-item">
+                <span class="key">B</span>
+                <span class="text">Open/Close Shop</span>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+</body>
+</html> 
